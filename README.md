@@ -55,30 +55,38 @@ That range is deliberate. It means I can take a system from problem statement th
 
 ---
 
-## Currently building — Palisade
+## Currently building — Basalt
 
-**Palisade** is a cloud security posture platform I'm building in public, one repository at a time. Findings flow through a single pipeline: multi-cloud scanners emit a shared schema, a warehouse tracks posture drift over time, retrieval explains *why* something is a risk with citations, and an agent opens the remediation PR.
+**Basalt** is a cloud security posture platform I'm building in public, one repository at a time. Findings flow through a single pipeline: multi-cloud scanners emit a shared schema, a warehouse tracks posture drift over time, retrieval explains *why* something is a risk with citations, and an agent opens the remediation PR.
 
 Each repo is a real, standalone artifact. The dependency order is the build order.
 
 | # | Repository | What it is | Track | Status |
 |:--|:--|:--|:--|:--|
-| 01 | `palisade-core` | Finding schema, severity model, control mappings, SARIF + OCSF emitters, scanner plugin interface. Published to PyPI. | Foundation | ⏳ Planned |
-| 02 | `palisade-aws` | AWS posture scanner — IAM, S3, MFA, CloudTrail, KMS. First consumer of core. | Cloud Security | ⏳ Planned |
-| 03 | `palisade-azure` | Azure scanner. Proves the plugin contract holds across providers. | Cloud Security | ⏳ Planned |
-| 04 | `palisade-iac` | Terraform static analyzer → SARIF → GitHub Code Scanning. | Cloud Security | ⏳ Planned |
-| 05 | `palisade-k8s` | Kubernetes posture — RBAC, Pod Security Standards, NetworkPolicy. | Cloud Security | ⏳ Planned |
-| 06 | `palisade-warehouse` | Ingests findings from every scanner. DuckDB + dbt, drift-over-time models. | Data Engineering | ⏳ Planned |
-| 07 | `palisade-dashboard` | Next.js. Risk trend, control coverage, compliance views, executive summary. | Data / Frontend | ⏳ Planned |
-| 08 | `palisade-rag` | Retrieval over findings and control catalogs, with citations: why is this a risk, which control, what remediation. | AI / RAG | ⏳ Planned |
-| 09 | `palisade-agent` | Takes a finding, generates a Terraform remediation PR. Closes the loop back to `palisade-iac`. | AI Agents | ⏳ Planned |
-| 10 | `palisade-platform` | Terraform + Helm + GitHub Actions to deploy the whole stack, plus the product documentation hub — PRDs, roadmap, ADR index, research. | Cloud Eng + PM | ⏳ Planned |
+| 01 | [`basalt-core`](https://github.com/kingsokafor777-droid/basalt-core) | Finding schema, risk model, control catalog, SARIF + OCSF emitters, scanner plugin interface. | Foundation | ✅ Shipped |
+| 02 | `basalt-aws` | AWS posture scanner — IAM, S3, MFA, CloudTrail, KMS. First consumer of core. | Cloud Security | ⏳ Planned |
+| 03 | `basalt-azure` | Azure scanner. Proves the plugin contract holds across providers. | Cloud Security | ⏳ Planned |
+| 04 | `basalt-iac` | Terraform static analyzer → SARIF → GitHub Code Scanning. | Cloud Security | ⏳ Planned |
+| 05 | `basalt-k8s` | Kubernetes posture — RBAC, Pod Security Standards, NetworkPolicy. | Cloud Security | ⏳ Planned |
+| 06 | `basalt-warehouse` | Ingests findings from every scanner. DuckDB + dbt, drift-over-time models. | Data Engineering | ⏳ Planned |
+| 07 | `basalt-dashboard` | Next.js. Risk trend, control coverage, compliance views, executive summary. | Data / Frontend | ⏳ Planned |
+| 08 | `basalt-rag` | Retrieval over findings and control catalogs, with citations: why is this a risk, which control, what remediation. | AI / RAG | ⏳ Planned |
+| 09 | `basalt-agent` | Takes a finding, generates a Terraform remediation PR. Closes the loop back to `basalt-iac`. | AI Agents | ⏳ Planned |
+| 10 | `basalt-platform` | Terraform + Helm + GitHub Actions to deploy the whole stack, plus the product documentation hub — PRDs, roadmap, ADR index, research. | Cloud Eng + PM | ⏳ Planned |
 
 <sub>✅ Shipped · 🚧 In progress · ⏳ Planned — this table updates as each repo lands. Links appear when the repo is public.</sub>
 
 ---
 
 ## Selected work
+
+### [basalt-core](https://github.com/kingsokafor777-droid/basalt-core)
+
+`Python` `Pydantic v2` `SARIF 2.1.0` `OCSF 1.3.0`
+
+One finding schema for cloud posture, IaC and Kubernetes security scanners. Security tooling fragments at the seams — every scanner emits a different JSON shape, and every dashboard and warehouse downstream needs a bespoke adapter. Basalt Core removes that layer by defining the contract once: a provider-neutral finding model, a deterministic risk score that ships with the factors that produced it, versioned control catalogs as replaceable data, and a scanner plugin interface discovered through Python entry points.
+
+Two decisions I'd point at. The resource URN percent-escapes `:` and `%` within segments, because ARNs and CloudFormation type names contain colons and would otherwise destroy the fixed-arity join key the whole warehouse design depends on — and `parse_urn()` plus round-trip tests enforce that reversibility rather than asserting it in a docstring. And the Python floor sits at 3.10, not 3.11, because Ubuntu 22.04 LTS is supported into 2027 and a foundation library every scanner depends on should have the lowest floor it can defend. ADR 0006 records that trade and the condition for reverting it.
 
 ### [Ontario Electricity Demand — Day-Ahead Forecasting & Dashboard](https://github.com/kingsokafor777-droid/ontario-demand-forecast)
 
@@ -123,3 +131,4 @@ Open to project-based and remote work in AI/ML, data, and cloud security.
 - **Portfolio** — [kingsleyokafor.dev](https://kingsleyokafor.dev)
 
 <sub>💬 Ask me about probabilistic forecasting, evaluation design, cloud security posture, or turning an engineering problem into a business case.</sub>
+
