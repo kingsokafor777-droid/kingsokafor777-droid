@@ -64,7 +64,7 @@ Each repo is a real, standalone artifact. The dependency order is the build orde
 | # | Repository | What it is | Track | Status |
 |:--|:--|:--|:--|:--|
 | 01 | [`basalt-core`](https://github.com/kingsokafor777-droid/basalt-core) | Finding schema, risk model, control catalog, SARIF + OCSF emitters, scanner plugin interface. | Foundation | ✅ Shipped |
-| 02 | `basalt-aws` | AWS posture scanner — IAM, S3, MFA, CloudTrail, KMS. First consumer of core. | Cloud Security | ⏳ Planned |
+| 02 | [`basalt-aws`](https://github.com/kingsokafor777-droid/basalt-aws) | Read-only AWS posture scanner — IAM, S3, MFA, CloudTrail, KMS. First consumer of core. | Cloud Security | ✅ Shipped |
 | 03 | `basalt-azure` | Azure scanner. Proves the plugin contract holds across providers. | Cloud Security | ⏳ Planned |
 | 04 | `basalt-iac` | Terraform static analyzer → SARIF → GitHub Code Scanning. | Cloud Security | ⏳ Planned |
 | 05 | `basalt-k8s` | Kubernetes posture — RBAC, Pod Security Standards, NetworkPolicy. | Cloud Security | ⏳ Planned |
@@ -86,7 +86,19 @@ Each repo is a real, standalone artifact. The dependency order is the build orde
 
 One finding schema for cloud posture, IaC and Kubernetes security scanners. Security tooling fragments at the seams — every scanner emits a different JSON shape, and every dashboard and warehouse downstream needs a bespoke adapter. Basalt Core removes that layer by defining the contract once: a provider-neutral finding model, a deterministic risk score that ships with the factors that produced it, versioned control catalogs as replaceable data, and a scanner plugin interface discovered through Python entry points.
 
-Two decisions I'd point at. The resource URN percent-escapes `:` and `%` within segments, because ARNs and CloudFormation type names contain colons and would otherwise destroy the fixed-arity join key the whole warehouse design depends on — and `parse_urn()` plus round-trip tests enforce that reversibility rather than asserting it in a docstring. And the Python floor sits at 3.10, not 3.11, because Ubuntu 22.04 LTS is supported into 2027 and a foundation library every scanner depends on should have the lowest floor it can defend. ADR 0006 records that trade and the condition for reverting it.
+The decision I'd point at is the resource URN, which is the join key every downstream consumer depends on. Version 0.1.0 substituted unsafe characters with `_` — which meant `parse_urn()` did not actually invert `urn`, and two distinct resources could silently collapse onto the same identity. Building `basalt-aws` against it surfaced the defect. 0.1.1 percent-encodes instead, so the transform is lossless, and round-trip tests now enforce the reversibility rather than a docstring asserting it. The changelog says plainly that affected fingerprints change and history should be rescanned rather than migrated.
+
+The Python floor also sits at 3.10 rather than 3.11, because Ubuntu 22.04 LTS is supported into 2027 and a library every scanner depends on should not force a toolchain upgrade on the boxes where scanners actually run. ADR 0006 records the trade and the condition for reverting it.
+
+### [basalt-aws](https://github.com/kingsokafor777-droid/basalt-aws)
+
+`Python` `boto3` `moto` `Terraform`
+
+A read-only AWS posture scanner covering IAM, S3, CloudTrail and KMS, emitting normalized Basalt findings. It registers through the `basalt.scanners` entry point, so `basalt scanners` discovers it without any wiring — the repo that proves the plugin contract holds rather than just describing it.
+
+The part worth reading is how the read-only guarantee is enforced. It isn't a promise in the README: CI asserts that no requested IAM permission begins with `Create`, `Put`, `Delete`, `Update`, `Attach`, `Modify` or `Write`, and separately that the shipped `terraform/main.tf` grants exactly the declared permission set and nothing more. A mutating call cannot reach main without the build failing. The whole test suite runs against `moto` in-process with no credentials configured, so a test that ever reached real AWS would fail rather than pass quietly.
+
+Access denials are treated as expected rather than exceptional — a read-only auditor role will always be denied somewhere, so checks skip what they cannot read instead of aborting the scan, and per-check errors are captured in scan metadata rather than raised.
 
 ### [Ontario Electricity Demand — Day-Ahead Forecasting & Dashboard](https://github.com/kingsokafor777-droid/ontario-demand-forecast)
 
