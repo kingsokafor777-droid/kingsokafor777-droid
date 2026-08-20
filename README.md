@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-19-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
+  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-20-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
 </p>
 
 ---
@@ -101,7 +101,7 @@ The current production release policy is deliberately strict: no container image
 
 **AgentProof** is an active CI-native verification program for tool-using AI agents. Its public foundation establishes versioned evidence contracts; subsequent repositories will replay recorded or synthetic tool-call traces, enforce workflow-level invariants, and report unsafe composed action paths—even where every individual action appears allowed.
 
-> **Current state:** 🚧 **Active development.** [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), and [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay) are publicly released with reproducible contracts, offline validation, deterministic evidence, definition provenance, and immutable-pinned quality gates. The remaining components follow in dependency order.
+> **Current state:** 🚧 **Active development.** [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay), and [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus) are publicly released with reproducible contracts, offline validation, deterministic evidence, definition provenance, and immutable-pinned quality gates. The remaining components follow in dependency order.
 
 | # | Planned repository | What it will own | Track | Current status |
 |:--|:--|:--|:--|:--|
@@ -110,7 +110,7 @@ The current production release policy is deliberately strict: no container image
 | 03 | [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp) | Offline MCP transcript parsing, hash-bound tool-definition provenance, and privacy-minimized capability inventory. | Agent Security | ✅ Shipped |
 | 04 | [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy) | Closed invariant DSL, deterministic Core evaluator, stable findings, and bounded Rego/Cedar review artifacts. | Policy Engineering | ✅ Shipped |
 | 05 | [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay) | Deterministic stateful replay, sequence graph, approval observations, and shortest policy-violation paths. | Security Engineering | ✅ Shipped |
-| 06 | `agentproof-corpus` | Versioned safe/adversarial workflow fixtures and benchmark harness. | Security Research | 🗺️ Planned |
+| 06 | [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus) | Versioned synthetic safe/adversarial fixtures, strict manifest integrity, and deterministic Core→Policy→Replay benchmarks. | Security Research | ✅ Shipped |
 | 07 | `agentproof-action` | GitHub Action, SARIF/JUnit output, baseline comparison, PR evidence. | DevSecOps | 🗺️ Planned |
 | 08 | `agentproof-python` | Python SDK and first framework + OpenTelemetry adapter. | Developer Experience | 🗺️ Planned |
 | 09 | `agentproof-typescript` | TypeScript SDK, Node integration, and typed trace capture. | Developer Experience | 🗺️ Planned |
@@ -126,7 +126,7 @@ The current production release policy is deliberately strict: no container image
 | **Scale model** | Framework-neutral core with adapter repositories; local-first and CI-native before any hosted control plane. |
 | **Security** | Deterministic workflow policies over sequences, authorization state, data labels, approvals, retries, and modeled side effects. |
 | **Impact** | Makes unsafe agent workflows reproducible in pull requests rather than discoverable only after production incidents. |
-| **Repository** | [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), and [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay) are released; the remaining repositories will be created in dependency order as each component enters active implementation. |
+| **Repository** | [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay), and [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus) are released; the remaining repositories will be created in dependency order as each component enters active implementation. |
 
 The first milestone is intentionally narrow: prove a privilege-escalation or data-exfiltration sequence from a sealed fixture; return a stable finding ID, violated invariant, shortest path, and SARIF result. No hosted SaaS, live destructive tool call, or non-deterministic test dependency belongs in version 1.
 
@@ -183,7 +183,7 @@ An end-to-end forecasting system based on public IESO demand and Open-Meteo weat
 ```yaml
 building:
   - Basalt: production-grade release controls for a cloud-security posture platform
-  - AgentProof: public Core, OTel, MCP, Policy, and Replay v0.1.0 foundations for agent-workflow security regression testing; corpus and benchmark design next
+  - AgentProof: public Core, OTel, MCP, Policy, Replay, and Corpus v0.1.0 foundations for agent-workflow security regression testing; CI action and evidence integration next
 learning:
   - OpenTelemetry agent trace conventions
   - deterministic policy evaluation for tool-using agents
