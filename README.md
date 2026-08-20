@@ -20,8 +20,6 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=kingsokafor777-droid&label=PROFILE+VIEWS&color=7C3AED&style=flat-square" alt="Profile views" />
-  <a href="https://github.com/kingsokafor777-droid?tab=followers"><img src="https://img.shields.io/github/followers/kingsokafor777-droid?label=FOLLOWERS&style=flat-square&color=7C3AED&logo=github" alt="GitHub followers" /></a>
   <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-14-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
 </p>
 
