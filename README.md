@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-14-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
+  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-15-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
 </p>
 
 ---
@@ -99,13 +99,13 @@ The current production release policy is deliberately strict: no container image
 
 ### AgentProof — workflow security regression testing for AI agents
 
-**AgentProof** is the next active build program: a CI-native verification system for tool-using AI agents. It will replay recorded or synthetic tool-call traces, enforce workflow-level invariants, and report unsafe composed action paths—even where every individual action appears allowed.
+**AgentProof** is an active CI-native verification program for tool-using AI agents. Its public foundation establishes versioned evidence contracts; subsequent repositories will replay recorded or synthetic tool-call traces, enforce workflow-level invariants, and report unsafe composed action paths—even where every individual action appears allowed.
 
-> **Current state:** 📐 **Architecture in development.** The system roadmap, threat model, repository boundaries, and release criteria are defined. No repository is represented as shipped before a public, reproducible release exists.
+> **Current state:** 🚧 **Active development.** [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core) is publicly released with reproducible contracts, offline validation, deterministic evidence IDs, JSON Schema artifacts, and quality gates. The remaining components follow in dependency order.
 
 | # | Planned repository | What it will own | Track | Current status |
 |:--|:--|:--|:--|:--|
-| 01 | `agentproof-core` | Versioned trace and finding contracts, policy result model, evidence IDs, JSON Schema. | Foundation | 📐 Architecture in development |
+| 01 | [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core) | Versioned trace and finding contracts, policy result model, evidence IDs, JSON Schema. | Foundation | ✅ Shipped |
 | 02 | `agentproof-otel` | OpenTelemetry ingestion and agent-span normalization. | Observability | 🗺️ Planned |
 | 03 | `agentproof-mcp` | MCP transcript parsing, tool-definition provenance, capability inventory. | Agent Security | 🗺️ Planned |
 | 04 | `agentproof-policy` | Readable invariant DSL, deterministic evaluator, Rego/Cedar adapters. | Policy Engineering | 🗺️ Planned |
@@ -126,7 +126,7 @@ The current production release policy is deliberately strict: no container image
 | **Scale model** | Framework-neutral core with adapter repositories; local-first and CI-native before any hosted control plane. |
 | **Security** | Deterministic workflow policies over sequences, authorization state, data labels, approvals, retries, and modeled side effects. |
 | **Impact** | Makes unsafe agent workflows reproducible in pull requests rather than discoverable only after production incidents. |
-| **Repository** | Public repositories will be created in dependency order as each component enters active implementation. |
+| **Repository** | [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core) is the released foundation; the remaining repositories will be created in dependency order as each component enters active implementation. |
 
 The first milestone is intentionally narrow: prove a privilege-escalation or data-exfiltration sequence from a sealed fixture; return a stable finding ID, violated invariant, shortest path, and SARIF result. No hosted SaaS, live destructive tool call, or non-deterministic test dependency belongs in version 1.
 
@@ -183,7 +183,7 @@ An end-to-end forecasting system based on public IESO demand and Open-Meteo weat
 ```yaml
 building:
   - Basalt: production-grade release controls for a cloud-security posture platform
-  - AgentProof: architecture and threat-model phase for agent-workflow security regression testing
+  - AgentProof: public Core v0.1.0 foundation for agent-workflow security regression testing; OpenTelemetry ingestion next
 learning:
   - OpenTelemetry agent trace conventions
   - deterministic policy evaluation for tool-using agents
