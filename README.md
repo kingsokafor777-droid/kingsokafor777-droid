@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-21-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
+  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-22-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
 </p>
 
 ---
@@ -101,7 +101,7 @@ The current production release policy is deliberately strict: no container image
 
 **AgentProof** is an active CI-native verification program for tool-using AI agents. Its public foundation establishes versioned evidence contracts; subsequent repositories will replay recorded or synthetic tool-call traces, enforce workflow-level invariants, and report unsafe composed action paths—even where every individual action appears allowed.
 
-> **Current state:** 🚧 **Active development.** [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay), [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus), and [`agentproof-action`](https://github.com/kingsokafor777-droid/agentproof-action) are publicly released with reproducible contracts, offline validation, deterministic evidence, definition provenance, CI evidence artifacts, and immutable-pinned quality gates. The remaining components follow in dependency order.
+> **Current state:** 🚧 **Active development.** [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay), [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus), [`agentproof-action`](https://github.com/kingsokafor777-droid/agentproof-action), and [`agentproof-python`](https://github.com/kingsokafor777-droid/agentproof-python) are publicly released with reproducible contracts, offline validation, deterministic evidence, definition provenance, CI evidence artifacts, and immutable-pinned quality gates. The remaining components follow in dependency order.
 
 | # | Planned repository | What it will own | Track | Current status |
 |:--|:--|:--|:--|:--|
@@ -112,7 +112,7 @@ The current production release policy is deliberately strict: no container image
 | 05 | [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay) | Deterministic stateful replay, sequence graph, approval observations, and shortest policy-violation paths. | Security Engineering | ✅ Shipped |
 | 06 | [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus) | Versioned synthetic safe/adversarial fixtures, strict manifest integrity, and deterministic Core→Policy→Replay benchmarks. | Security Research | ✅ Shipped |
 | 07 | [`agentproof-action`](https://github.com/kingsokafor777-droid/agentproof-action) | Bundled Node Action with strict local evidence validation, deterministic SARIF/JUnit/JSON output, exact baseline comparison, and safe opt-in PR evidence. | DevSecOps | ✅ Shipped |
-| 08 | `agentproof-python` | Python SDK and first framework + OpenTelemetry adapter. | Developer Experience | 🗺️ Planned |
+| 08 | [`agentproof-python`](https://github.com/kingsokafor777-droid/agentproof-python) | Typed append-only Core trace capture, payload-blind lifecycle helpers, an optional LangChain tool callback, and deterministic offline OTLP JSON handoff. | Developer Experience | ✅ Shipped |
 | 09 | `agentproof-typescript` | TypeScript SDK, Node integration, and typed trace capture. | Developer Experience | 🗺️ Planned |
 | 10 | `agentproof-platform` | Architecture decisions, documentation, release policy, deployment references, runbooks. | Platform Engineering | 🗺️ Planned |
 
@@ -126,7 +126,7 @@ The current production release policy is deliberately strict: no container image
 | **Scale model** | Framework-neutral core with adapter repositories; local-first and CI-native before any hosted control plane. |
 | **Security** | Deterministic workflow policies over sequences, authorization state, data labels, approvals, retries, and modeled side effects. |
 | **Impact** | Makes unsafe agent workflows reproducible in pull requests rather than discoverable only after production incidents. |
-| **Repository** | [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay), [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus), and [`agentproof-action`](https://github.com/kingsokafor777-droid/agentproof-action) are released; the remaining repositories will be created in dependency order as each component enters active implementation. |
+| **Repository** | [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay), [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus), [`agentproof-action`](https://github.com/kingsokafor777-droid/agentproof-action), and [`agentproof-python`](https://github.com/kingsokafor777-droid/agentproof-python) are released; the remaining repositories will be created in dependency order as each component enters active implementation. |
 
 The first milestone is intentionally narrow: prove a privilege-escalation or data-exfiltration sequence from a sealed fixture; return a stable finding ID, violated invariant, shortest path, and SARIF result. No hosted SaaS, live destructive tool call, or non-deterministic test dependency belongs in version 1.
 
@@ -183,7 +183,7 @@ An end-to-end forecasting system based on public IESO demand and Open-Meteo weat
 ```yaml
 building:
   - Basalt: production-grade release controls for a cloud-security posture platform
-  - AgentProof: public Core, OTel, MCP, Policy, Replay, Corpus, and Action v0.1.0 foundations for agent-workflow security regression testing; Python and TypeScript SDKs next
+  - AgentProof: public Core, OTel, MCP, Policy, Replay, Corpus, Action, and Python SDK v0.1.0 foundations for agent-workflow security regression testing; TypeScript SDK next
 learning:
   - OpenTelemetry agent trace conventions
   - deterministic policy evaluation for tool-using agents
