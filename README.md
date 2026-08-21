@@ -132,6 +132,41 @@ The first milestone is intentionally narrow: prove a privilege-escalation or dat
 
 </details>
 
+### Continuous Control Monitoring & Evidence Engineering — cloud evidence automation
+
+**Continuous Control Monitoring & Evidence Engineering** is the next flagship build: a deterministic, evidence-first platform for assessing AWS and Azure technical control posture, retaining tamper-evident evidence, and producing review-ready risk, exception, remediation, and audit-package views. It will report **versioned technical-control assessments and supporting evidence**, not claim ISO certification, SOC 2 attestation, or framework conformance from an automated check.
+
+> **Current state:** 📐 **Architecture and roadmap complete; implementation has not started.** The program will begin with `ccm-core`, the versioned contract foundation for evidence, controls, assessments, exceptions, remediation, and audit exports. All repository names below are planned and are **not yet public repositories**.
+
+| # | Planned repository | What it will own | Track | Current status |
+|:--|:--|:--|:--|:--|
+| 01 | `ccm-core` | Versioned evidence, control, assessment, exception, remediation, and audit-package contracts; JSON Schema, canonical hashing, and append-only journal verification. | Foundation | 📐 Architecture complete |
+| 02 | `ccm-controls` | Declarative technical-control DSL, versioned control packs, mapping provenance, deterministic evaluation, severity, and SLA policy. | Control Engineering | 🗺️ Planned |
+| 03 | `ccm-aws` | Read-only AWS collection for identity, storage, CloudTrail, Config, KMS, network, encryption, and logging posture. | Cloud Security | 🗺️ Planned |
+| 04 | `ccm-azure` | Read-only Azure collection for Resource Graph inventory, storage, network posture, Monitor/Activity Log, Key Vault, and encryption posture. | Cloud Security | 🗺️ Planned |
+| 05 | `ccm-ledger` | PostgreSQL evidence persistence, content-addressed evidence references, immutable audit journal, retention, expiry, and integrity verification. | Data / Evidence Engineering | 🗺️ Planned |
+| 06 | `ccm-assessor` | Deterministic assessment orchestration, evidence coverage, drift comparison, risk rollups, and assessment manifests. | Risk Engineering | 🗺️ Planned |
+| 07 | `ccm-casework` | Control exceptions, compensating controls, remediation workflow, ownership, SLA clocks, approvals, and closure verification. | GRC Engineering | 🗺️ Planned |
+| 08 | `ccm-audit-export` | Reproducible evidence packages, integrity manifests, redaction policy, verification CLI, and audit-preparation exports. | Audit Engineering | 🗺️ Planned |
+| 09 | `ccm-console` | FastAPI, PostgreSQL API boundary, RBAC, Next.js/React executive dashboard, evidence explorer, and remediation workbench. | Product / Frontend | 🗺️ Planned |
+| 10 | `ccm-platform` | Docker, Terraform test environment, OpenTelemetry, CI/CD, deployment references, threat model, ADRs, and operator runbooks. | Platform Engineering | 🗺️ Planned |
+
+<details>
+<summary><strong>System detail — evidence before dashboard</strong></summary>
+<br />
+
+| Dimension | Continuous Control Monitoring design target |
+|---|---|
+| **Determinism** | No AI is required for collection, evaluation, scoring, exceptions, export, or tests. The same rule and evidence version must produce the same result. |
+| **Evidence** | Every result links to collector provenance, cloud scope, asset identity, source timestamp, canonical hash, expiry state, rule version, and control mapping. |
+| **Framework boundary** | NIST mapping data will be versioned; ISO, CIS, and SOC 2 mappings will use identifiers, source provenance, and customer-licensed packs rather than copied proprietary control text. |
+| **Security** | No cloud credentials or live provider calls in tests; real collection is opt-in, read-only, least-privilege, and tenant-scoped. |
+| **Impact** | Replaces screenshot-driven compliance preparation with reproducible technical evidence, explicit coverage gaps, and accountable remediation workflow. |
+
+The first vertical slice will be intentionally narrow: AWS IAM/MFA, S3 encryption/public-access posture, CloudTrail and Config posture, Azure inventory/activity-log posture, one `PARTIAL` technical control, and a traceable evidence-to-remediation view. Missing scope, expired evidence, collection failure, or unavailable source must surface as an explicit coverage gap—not a pass.
+
+</details>
+
 ### [Ontario Electricity Demand — Day-Ahead Forecasting](https://github.com/kingsokafor777-droid/ontario-demand-forecast)
 
 An end-to-end forecasting system based on public IESO demand and Open-Meteo weather data. Its core constraint is **knowability**: every feature must be available twenty-four hours before the target hour. Evaluation uses chronological holdout and persistence/seasonal-naïve baselines, ensuring that reported model value is not a result of future-data leakage.
@@ -184,6 +219,7 @@ An end-to-end forecasting system based on public IESO demand and Open-Meteo weat
 building:
   - Basalt: production-grade release controls for a cloud-security posture platform
   - AgentProof: complete ten-repository, local-first security-regression toolkit with protected-branch and tagged v0.1.0 source releases for contracts, intake, deterministic policy/replay, corpus, CI evidence, typed SDKs, and platform operations
+  - Continuous Control Monitoring: architecture-complete, deterministic AWS/Azure evidence-engineering platform; ccm-core is next
 learning:
   - OpenTelemetry agent trace conventions
   - deterministic policy evaluation for tool-using agents
