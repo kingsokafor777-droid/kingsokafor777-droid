@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-33-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
+  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-34-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
 </p>
 
 ---
@@ -134,11 +134,11 @@ The first milestone is intentionally narrow: prove a privilege-escalation or dat
 
 ### Continuous Control Monitoring & Evidence Engineering — cloud evidence automation
 
-**Continuous Control Monitoring & Evidence Engineering** is the next flagship build: a deterministic, evidence-first platform for assessing AWS and Azure technical control posture, retaining tamper-evident evidence, and producing review-ready risk, exception, remediation, and audit-package views. It will report **versioned technical-control assessments and supporting evidence**, not claim ISO certification, SOC 2 attestation, or framework conformance from an automated check.
+**Continuous Control Monitoring & Evidence Engineering** is a completed ten-repository, deterministic, evidence-first platform program for assessing AWS and Azure technical control posture, retaining tamper-evident evidence, and producing review-ready risk, exception, remediation, and audit-package views. It reports **versioned technical-control assessments and supporting evidence**, not ISO certification, SOC 2 attestation, or framework conformance from an automated check.
 
-> **Current state:** ⚙️ **The collection, evidence, assessment, casework, audit-preparation, and product-console foundation is shipped; the platform-handoff component remains in development.** [`ccm-core`](https://github.com/kingsokafor777-droid/ccm-core) v0.1.0, [`ccm-controls`](https://github.com/kingsokafor777-droid/ccm-controls) v0.1.1, [`ccm-aws`](https://github.com/kingsokafor777-droid/ccm-aws) v0.1.1, [`ccm-azure`](https://github.com/kingsokafor777-droid/ccm-azure) v0.1.0, [`ccm-ledger`](https://github.com/kingsokafor777-droid/ccm-ledger) v0.1.1, [`ccm-assessor`](https://github.com/kingsokafor777-droid/ccm-assessor) v0.1.0, [`ccm-casework`](https://github.com/kingsokafor777-droid/ccm-casework) v0.1.0, [`ccm-audit-export`](https://github.com/kingsokafor777-droid/ccm-audit-export) v0.1.0, and [`ccm-console`](https://github.com/kingsokafor777-droid/ccm-console) v0.1.2 are shipped source releases with deterministic validation, successful hosted CI and CodeQL workflows, and protected `main` branches. They provide contracts/integrity, control definition/evaluation, AWS/Azure normalization, evidence ledger, supplied-observation assessment, local casework, payload-blind audit preparation, and a secure console API/workbench boundary only; repository 10 below remains planned and is **not yet public**.
+> **Current state:** ✅ **Program complete.** [`ccm-core`](https://github.com/kingsokafor777-droid/ccm-core) v0.1.0, [`ccm-controls`](https://github.com/kingsokafor777-droid/ccm-controls) v0.1.1, [`ccm-aws`](https://github.com/kingsokafor777-droid/ccm-aws) v0.1.1, [`ccm-azure`](https://github.com/kingsokafor777-droid/ccm-azure) v0.1.0, [`ccm-ledger`](https://github.com/kingsokafor777-droid/ccm-ledger) v0.1.1, [`ccm-assessor`](https://github.com/kingsokafor777-droid/ccm-assessor) v0.1.0, [`ccm-casework`](https://github.com/kingsokafor777-droid/ccm-casework) v0.1.0, [`ccm-audit-export`](https://github.com/kingsokafor777-droid/ccm-audit-export) v0.1.0, [`ccm-console`](https://github.com/kingsokafor777-droid/ccm-console) v0.1.2, and [`ccm-platform`](https://github.com/kingsokafor777-droid/ccm-platform) v0.1.0 are verified source releases with deterministic validation, successful hosted CI and CodeQL workflows, and protected `main` branches. Together they provide contracts/integrity, control definition/evaluation, AWS/Azure normalization, evidence ledger, supplied-observation assessment, local casework, payload-blind audit preparation, a secure console API/workbench boundary, and platform deployment/operations references. These are source releases; no provisioned cloud environment, deployed database or telemetry backend, published container image, or certification is implied.
 
-| # | Planned repository | What it will own | Track | Current status |
+| # | Repository | What it owns | Track | Current status |
 |:--|:--|:--|:--|:--|
 | 01 | [`ccm-core`](https://github.com/kingsokafor777-droid/ccm-core) | Versioned evidence, control, assessment, exception, remediation, and audit-package contracts; JSON Schema, canonical hashing, and append-only journal verification. | Foundation | ✅ Shipped |
 | 02 | [`ccm-controls`](https://github.com/kingsokafor777-droid/ccm-controls) | Declarative technical-control DSL, versioned control packs, mapping provenance, deterministic evaluation, severity, and SLA policy. | Control Engineering | ✅ Shipped |
@@ -149,7 +149,7 @@ The first milestone is intentionally narrow: prove a privilege-escalation or dat
 | 07 | [`ccm-casework`](https://github.com/kingsokafor777-droid/ccm-casework) | Deterministic control-exception references, compensating-control evidence, remediation ownership/state, supplied-time SLA evaluation, approval evidence, and closure verification. | GRC Engineering | ✅ Shipped · v0.1.0 |
 | 08 | [`ccm-audit-export`](https://github.com/kingsokafor777-droid/ccm-audit-export) | Deterministic payload-blind evidence packages, declared redaction policy, integrity manifests, and offline verification CLI for audit preparation. | Audit Engineering | ✅ Shipped · v0.1.0 |
 | 09 | [`ccm-console`](https://github.com/kingsokafor777-droid/ccm-console) | Tenant-scoped FastAPI/PostgreSQL API boundary, RBAC, payload-blind evidence explorer, and Next.js/React executive coordination workbench. | Product / Frontend | ✅ Shipped · v0.1.2 |
-| 10 | `ccm-platform` | Docker, Terraform test environment, OpenTelemetry, CI/CD, deployment references, threat model, ADRs, and operator runbooks. | Platform Engineering | 🗺️ Planned |
+| 10 | [`ccm-platform`](https://github.com/kingsokafor777-droid/ccm-platform) | Docker/Compose references, provider-free Terraform test environment, OpenTelemetry data-minimization policy, CI/CD controls, deployment references, threat model, ADRs, and operator runbooks. | Platform Engineering | ✅ Shipped · v0.1.0 |
 
 <details>
 <summary><strong>System detail — evidence before dashboard</strong></summary>
@@ -163,7 +163,7 @@ The first milestone is intentionally narrow: prove a privilege-escalation or dat
 | **Security** | No cloud credentials or live provider calls in tests; real collection is opt-in, read-only, least-privilege, and tenant-scoped. |
 | **Impact** | Replaces screenshot-driven compliance preparation with reproducible technical evidence, explicit coverage gaps, and accountable remediation workflow. |
 
-The first vertical slice will be intentionally narrow: AWS IAM/MFA, S3 encryption/public-access posture, CloudTrail and Config posture, Azure inventory/activity-log posture, one `PARTIAL` technical control, and a traceable evidence-to-remediation view. Missing scope, expired evidence, collection failure, or unavailable source must surface as an explicit coverage gap—not a pass.
+The completed program deliberately remains bounded: `ccm-platform` supplies deployment references and operator handoff, not a provisioned cloud account, live OpenTelemetry backend, published container image, or deployed database. Missing scope, expired evidence, collection failure, or unavailable source must surface as an explicit coverage gap—not a pass.
 
 </details>
 
@@ -219,7 +219,7 @@ An end-to-end forecasting system based on public IESO demand and Open-Meteo weat
 building:
   - Basalt: production-grade release controls for a cloud-security posture platform
   - AgentProof: complete ten-repository, local-first security-regression toolkit with protected-branch and tagged v0.1.0 source releases for contracts, intake, deterministic policy/replay, corpus, CI evidence, typed SDKs, and platform operations
-  - Continuous Control Monitoring: deterministic AWS/Azure evidence-engineering platform; ccm-core v0.1.0, ccm-controls v0.1.1, ccm-aws v0.1.1, ccm-azure v0.1.0, ccm-ledger v0.1.1, ccm-assessor v0.1.0, ccm-casework v0.1.0, ccm-audit-export v0.1.0, and ccm-console v0.1.2 are shipped; ccm-platform is next
+  - Continuous Control Monitoring: complete ten-repository AWS/Azure evidence-engineering program; ccm-core v0.1.0, ccm-controls v0.1.1, ccm-aws v0.1.1, ccm-azure v0.1.0, ccm-ledger v0.1.1, ccm-assessor v0.1.0, ccm-casework v0.1.0, ccm-audit-export v0.1.0, ccm-console v0.1.2, and ccm-platform v0.1.0 are shipped source releases
 learning:
   - OpenTelemetry agent trace conventions
   - deterministic policy evaluation for tool-using agents
