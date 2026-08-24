@@ -167,6 +167,39 @@ The completed program deliberately remains bounded: `ccm-platform` supplies depl
 
 </details>
 
+### Cyrisk — evidence-governed cyber risk quantification
+
+**Cyrisk** is the next planned flagship program: a deterministic, scenario-based system that translates supplied technical evidence and explicit assumptions into reproducible cyber-risk exposure ranges, control-comparison artifacts, risk-register records, and review-ready executive material. It is **FAIR-inspired, not a FAIR implementation or certification claim**. Its outputs will be versioned analyses of supplied inputs—not forecasts, insurance estimates, real loss predictions, spend recommendations, or automated risk-acceptance decisions. NIST positions cybersecurity risk information and risk registers as inputs to enterprise risk-management processes, not substitutes for leadership decisions. [1] [2]
+
+> **Current state:** 📐 **Architecture complete; implementation has not begun.** The first component will establish the canonical scenario, uncertainty, calculation-manifest, and review-record contracts. No `cyrisk-*` repository is public yet.
+
+| # | Planned repository | What it will own | Track | Current status |
+|:--|:--|:--|:--|:--|
+| 01 | `cyrisk-core` | Versioned scenario, factor-range/distribution, loss-component, calculation-manifest, comparison, risk-register, and review-decision contracts; JSON Schema and canonical hashing. | Foundation | 📐 Architecture complete |
+| 02 | `cyrisk-model` | Seed-controlled exposure-range simulation, percentile summaries, sensitivity analysis, and stable calculation traces. | Quantitative Risk Engineering | 🧭 Planned |
+| 03 | `cyrisk-evidence` | Input provenance, estimate/assumption registry, confidence/completeness rules, calibration-review records, integrity, and expiry. | Evidence Engineering | 🧭 Planned |
+| 04 | `cyrisk-controls` | Versioned control-effect and cost assumptions plus explicit non-causal before/after comparison artifacts. | Control Economics | 🧭 Planned |
+| 05 | `cyrisk-register` | Cybersecurity risk-register lifecycle, appetite/tolerance context, rollup, review evidence, escalation, and decision boundaries. | GRC / ERM Engineering | 🧭 Planned |
+| 06 | `cyrisk-ccm` | Offline adapter from versioned CCM evidence/assessment references to scenario-input candidates and coverage gaps. | Integration Engineering | 🧭 Planned |
+| 07 | `cyrisk-scenarios` | Sealed synthetic scenario corpus, benchmark harness, regression fixtures, and adversarial assumption-quality cases. | Risk Research | 🧭 Planned |
+| 08 | `cyrisk-export` | Reproducible executive/review packages, redaction policy, manifests, verification CLI, and decision-context exports. | Audit Engineering | 🧭 Planned |
+| 09 | `cyrisk-console` | FastAPI/PostgreSQL boundary, RBAC, scenario/range/sensitivity workbench, control-comparison review, and risk-register view. | Product / Frontend | 🧭 Planned |
+| 10 | `cyrisk-platform` | Docker/Compose references, provider-free Terraform, telemetry policy, CI/CD controls, threat model, ADRs, and runbooks. | Platform Engineering | 🧭 Planned |
+
+<details>
+<summary><strong>System detail — evidence before exposure</strong></summary>
+<br />
+
+| Dimension | Cyrisk design target |
+|---|---|
+| **Input discipline** | Every estimate has a unit, range/distribution, rationale, source class, confidence, review state, expiry, and canonical hash. Unknowns remain explicit. |
+| **Determinism** | Same sealed scenario, assumptions, model version, and seed produce stable output. No live market data, LLM, customer evidence, or external calculation service belongs in default tests. |
+| **Output discipline** | Report percentile bands, sensitivity drivers, completeness, and assumptions—not a single authoritative financial number. |
+| **Decision boundary** | The system can record supplied tolerance or approval evidence; it cannot accept risk, authorize spend, execute remediation, or claim that a control causes real-world savings. |
+| **CCM relationship** | CCM contributes versioned technical-evidence references through an offline adapter; Cyrisk never reads a live CCM database or silently treats a finding as a loss event. |
+
+</details>
+
 ### [Ontario Electricity Demand — Day-Ahead Forecasting](https://github.com/kingsokafor777-droid/ontario-demand-forecast)
 
 An end-to-end forecasting system based on public IESO demand and Open-Meteo weather data. Its core constraint is **knowability**: every feature must be available twenty-four hours before the target hour. Evaluation uses chronological holdout and persistence/seasonal-naïve baselines, ensuring that reported model value is not a result of future-data leakage.
@@ -220,6 +253,7 @@ building:
   - Basalt: production-grade release controls for a cloud-security posture platform
   - AgentProof: complete ten-repository, local-first security-regression toolkit with protected-branch and tagged v0.1.0 source releases for contracts, intake, deterministic policy/replay, corpus, CI evidence, typed SDKs, and platform operations
   - Continuous Control Monitoring: complete ten-repository AWS/Azure evidence-engineering program; ccm-core v0.1.0, ccm-controls v0.1.1, ccm-aws v0.1.1, ccm-azure v0.1.0, ccm-ledger v0.1.1, ccm-assessor v0.1.0, ccm-casework v0.1.0, ccm-audit-export v0.1.0, ccm-console v0.1.2, and ccm-platform v0.1.0 are shipped source releases
+  - Cyrisk: architecture-stage evidence-governed cyber-risk quantification program; deterministic scenario/range analysis, uncertainty/provenance, control-comparison artifacts, reviewed risk-register records, and CCM integration boundaries—no repositories public yet
 learning:
   - OpenTelemetry agent trace conventions
   - deterministic policy evaluation for tool-using agents
@@ -231,6 +265,9 @@ open_to:
   - cloud-security and developer-tooling collaboration
   - data-product and technical-architecture work
 ```
+
+[1]: https://csrc.nist.gov/pubs/ir/8286/r1/final "NISTIR 8286 Rev. 1 — Integrating Cybersecurity and Enterprise Risk Management"
+[2]: https://csrc.nist.gov/pubs/ir/8286/a/r1/final "NISTIR 8286A Rev. 1 — Identifying and Estimating Cybersecurity Risk for Enterprise Risk Management"
 
 ---
 
