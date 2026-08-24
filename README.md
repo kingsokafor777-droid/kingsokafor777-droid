@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-38-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
+  <a href="https://github.com/kingsokafor777-droid?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-39-312E81?style=flat-square&logo=github&logoColor=white" alt="Public repositories" /></a>
 </p>
 
 ---
@@ -171,7 +171,7 @@ The completed program deliberately remains bounded: `ccm-platform` supplies depl
 
 **Cyrisk** is the next planned flagship program: a deterministic, scenario-based system that translates supplied technical evidence and explicit assumptions into reproducible cyber-risk exposure ranges, control-comparison artifacts, risk-register records, and review-ready executive material. It is **FAIR-inspired, not a FAIR implementation or certification claim**. Its outputs will be versioned analyses of supplied inputs—not forecasts, insurance estimates, real loss predictions, spend recommendations, or automated risk-acceptance decisions. NIST positions cybersecurity risk information and risk registers as inputs to enterprise risk-management processes, not substitutes for leadership decisions. [1] [2]
 
-> **Current state:** ⚙️ **Foundation, deterministic model, evidence governance, and control comparisons shipped; risk-register workflow next.** [`cyrisk-core`](https://github.com/kingsokafor777-droid/cyrisk-core) v0.1.0, [`cyrisk-model`](https://github.com/kingsokafor777-droid/cyrisk-model) v0.1.0, [`cyrisk-evidence`](https://github.com/kingsokafor777-droid/cyrisk-evidence) v0.1.0, and [`cyrisk-controls`](https://github.com/kingsokafor777-droid/cyrisk-controls) v0.1.0 are verified source releases with deterministic validation, successful hosted CI and CodeQL workflows, and protected `main` branches. Control comparisons are arithmetic differences between supplied synthetic records—not causal proof, ROI, savings, pricing validation, or procurement advice. Repositories 05–10 remain planned and are not public.
+> **Current state:** ⚙️ **Foundation, deterministic model, evidence governance, controls, and risk-register signals shipped; CCM adapter next.** [`cyrisk-core`](https://github.com/kingsokafor777-droid/cyrisk-core) v0.1.0, [`cyrisk-model`](https://github.com/kingsokafor777-droid/cyrisk-model) v0.1.0, [`cyrisk-evidence`](https://github.com/kingsokafor777-droid/cyrisk-evidence) v0.1.0, [`cyrisk-controls`](https://github.com/kingsokafor777-droid/cyrisk-controls) v0.1.0, and [`cyrisk-register`](https://github.com/kingsokafor777-droid/cyrisk-register) v0.1.0 are verified source releases with deterministic validation, successful hosted CI and CodeQL workflows, and protected `main` branches. Register outputs are technical threshold, review-date, and closure-claim signals from supplied records—not authority validation, risk acceptance, remediation verification, or workflow execution. Repositories 06–10 remain planned and are not public.
 
 | # | Repository | What it owns | Track | Current status |
 |:--|:--|:--|:--|:--|
@@ -179,7 +179,7 @@ The completed program deliberately remains bounded: `ccm-platform` supplies depl
 | 02 | [`cyrisk-model`](https://github.com/kingsokafor777-droid/cyrisk-model) | Seed-controlled exposure-range simulation, percentile summaries, sensitivity analysis, and stable calculation traces. | Quantitative Risk Engineering | ✅ Shipped · v0.1.0 |
 | 03 | [`cyrisk-evidence`](https://github.com/kingsokafor777-droid/cyrisk-evidence) | Input provenance, estimate/assumption registry, confidence/completeness rules, calibration-review records, integrity, and expiry. | Evidence Engineering | ✅ Shipped · v0.1.0 |
 | 04 | [`cyrisk-controls`](https://github.com/kingsokafor777-droid/cyrisk-controls) | Versioned control-effect and cost assumptions plus explicit non-causal before/after comparison artifacts. | Control Economics | ✅ Shipped · v0.1.0 |
-| 05 | `cyrisk-register` | Cybersecurity risk-register lifecycle, appetite/tolerance context, rollup, review evidence, escalation, and decision boundaries. | GRC / ERM Engineering | 🧭 Planned |
+| 05 | [`cyrisk-register`](https://github.com/kingsokafor777-droid/cyrisk-register) | Cybersecurity risk-register lifecycle, appetite/tolerance context, rollup, review evidence, escalation, and decision boundaries. | GRC / ERM Engineering | ✅ Shipped · v0.1.0 |
 | 06 | `cyrisk-ccm` | Offline adapter from versioned CCM evidence/assessment references to scenario-input candidates and coverage gaps. | Integration Engineering | 🧭 Planned |
 | 07 | `cyrisk-scenarios` | Sealed synthetic scenario corpus, benchmark harness, regression fixtures, and adversarial assumption-quality cases. | Risk Research | 🧭 Planned |
 | 08 | `cyrisk-export` | Reproducible executive/review packages, redaction policy, manifests, verification CLI, and decision-context exports. | Audit Engineering | 🧭 Planned |
