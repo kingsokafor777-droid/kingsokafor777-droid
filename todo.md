@@ -12,4 +12,4 @@
 - [x] Reproduce and repair `basalt-warehouse` and `basalt-rag` image-verification failures; push validated fixes.
 - [x] Reproduce and repair `basalt-dashboard` TypeScript validation and image-verification failures; push a validated fix.
 - [x] Investigate the `cyrisk-core` Dependabot automation failure without weakening source-quality or branch-protection controls; confirmed a GitHub-managed dynamic workflow with no repository-controlled repair or rerun path.
-- [ ] Verify all repaired repositories report green current-main checks, then update profile program statuses only from the resulting evidence.
+- [x] Verify all repaired Basalt repositories report green current-main checks, then update the profile program status only from the resulting evidence; document the separate GitHub-managed Cyrisk Dependabot exception without masking it.
