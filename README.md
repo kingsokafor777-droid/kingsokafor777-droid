@@ -74,7 +74,7 @@ I currently work as a Product Lead Architect on an AI/ML energy platform with th
 
 **Basalt** joins multi-cloud, IaC, and Kubernetes posture evidence into a common finding contract, with drift-aware Warehouse models, tenant-scoped dashboard boundaries, cited explanation, and controlled remediation planning.
 
-> **Current state:** 9 repositories are shipped; `basalt-platform` remains in deliberate production hardening behind an active zero-high/critical image gate.
+> **Current state:** Basalt is in active public hardening. Current default-branch checks require repair in `basalt-aws`, `basalt-warehouse`, `basalt-dashboard`, and `basalt-rag`; `basalt-platform` retains its production gate. It is not represented here as a deployed cloud service or production release.
 
 **[Explore Basalt — full repository architecture →](https://kingsokafor777-droid.github.io/kingsokafor777-droid/projects/basalt.html)**
 
