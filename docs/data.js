@@ -5,19 +5,19 @@ window.PORTFOLIO_PROGRAMS = [
     eyebrow: "Cloud-security posture platform",
     headline: "Normalize posture evidence. Preserve the operational trail.",
     summary: "A ten-repository cloud-security system joining multi-cloud, IaC, and Kubernetes evidence through a common finding contract, drift-aware Warehouse models, and controlled remediation paths.",
-    boundary: "Public source is under active hardening: default-branch quality-gate repairs are outstanding for AWS, Warehouse, Dashboard, and RAG. No container image or dependent cloud provisioning is represented as published until the zero-high/critical image gate passes.",
-    status: "6 current-main check sets clean · 4 CI repairs pending · platform production gate",
+    boundary: "All 10 current-main branches have hosted quality and zero-high/critical image gates passing as of 2026-08-26. No container image or dependent cloud provisioning is represented as published; Basalt remains source software rather than a deployed cloud service or production release.",
+    status: "10 current-main check sets clean · platform production gate retained",
     rows: [
-      ["01", "basalt-core", "Canonical findings, deterministic risk model, control catalogue, SARIF/OCSF, scanner interface.", "Foundation", "Source component · current-main check passing"],
-      ["02", "basalt-aws", "Read-only AWS posture scanner for IAM, S3, MFA, CloudTrail, and KMS.", "Cloud Security", "Source component · CI repair pending"],
-      ["03", "basalt-azure", "Azure scanner validating the multi-provider plugin contract.", "Cloud Security", "Source component · current-main check passing"],
-      ["04", "basalt-iac", "Terraform static analysis and SARIF output.", "Cloud Security", "Source component · current-main check passing"],
-      ["05", "basalt-k8s", "Kubernetes RBAC, Pod Security Standards, and NetworkPolicy posture checks.", "Cloud Security", "Source component · current-main check passing"],
-      ["06", "basalt-warehouse", "Finding ingestion, DuckDB/dbt modeling, and posture drift history.", "Data Engineering", "Source component · CI repair pending"],
-      ["07", "basalt-dashboard", "Tenant-aware executive posture analytics and Warehouse read boundary.", "Data / Frontend", "Source component · CI repair pending"],
-      ["08", "basalt-rag", "Retrieval over findings and controls with citations.", "AI / RAG", "Source component · CI repair pending"],
-      ["09", "basalt-agent", "Guarded Terraform-remediation planning.", "AI Agents", "Source component · current-main check passing"],
-      ["10", "basalt-platform", "Terraform, Helm, CI/CD, architecture decisions, and release documentation.", "Platform Engineering", "Source component · production hardening"]
+      ["01", "basalt-core", "Canonical findings, deterministic risk model, control catalogue, SARIF/OCSF, scanner interface.", "Foundation", "Source component · current-main checks passing"],
+      ["02", "basalt-aws", "Read-only AWS posture scanner for IAM, S3, MFA, CloudTrail, and KMS.", "Cloud Security", "Source component · current-main checks passing"],
+      ["03", "basalt-azure", "Azure scanner validating the multi-provider plugin contract.", "Cloud Security", "Source component · current-main checks passing"],
+      ["04", "basalt-iac", "Terraform static analysis and SARIF output.", "Cloud Security", "Source component · current-main checks passing"],
+      ["05", "basalt-k8s", "Kubernetes RBAC, Pod Security Standards, and NetworkPolicy posture checks.", "Cloud Security", "Source component · current-main checks passing"],
+      ["06", "basalt-warehouse", "Finding ingestion, DuckDB/dbt modeling, and posture drift history.", "Data Engineering", "Source component · current-main checks passing"],
+      ["07", "basalt-dashboard", "Tenant-aware executive posture analytics and Warehouse read boundary.", "Data / Frontend", "Source component · current-main checks passing"],
+      ["08", "basalt-rag", "Retrieval over findings and controls with citations.", "AI / RAG", "Source component · current-main checks passing"],
+      ["09", "basalt-agent", "Guarded Terraform-remediation planning.", "AI Agents", "Source component · current-main checks passing"],
+      ["10", "basalt-platform", "Terraform, Helm, CI/CD, architecture decisions, and release documentation.", "Platform Engineering", "Source component · current-main checks passing · production gate retained"]
     ].map(([id, repository, description, track, status]) => ({ id, repository, description, track, status }))
   },
   {

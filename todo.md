@@ -8,3 +8,8 @@
 - [x] Recheck the Basalt, AgentProof, CCM, and Cyrisk featured programs against their public releases, protections, hosted checks, and stated README boundaries.
 - [x] Correct only inaccurate or irrelevant public-profile wording, rerun static validation, and publish any justified profile-repository revision.
 - [x] Document verified evidence, limitations, and remaining work without overstating repository maturity or hiding accurate authorship.
+- [x] Reproduce and repair `basalt-aws` lint and Python 3.10/3.12/3.13 test failures; push a validated fix.
+- [x] Reproduce and repair `basalt-warehouse` and `basalt-rag` image-verification failures; push validated fixes.
+- [x] Reproduce and repair `basalt-dashboard` TypeScript validation and image-verification failures; push a validated fix.
+- [x] Investigate the `cyrisk-core` Dependabot automation failure without weakening source-quality or branch-protection controls; confirmed a GitHub-managed dynamic workflow with no repository-controlled repair or rerun path.
+- [ ] Verify all repaired repositories report green current-main checks, then update profile program statuses only from the resulting evidence.
