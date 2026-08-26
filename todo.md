@@ -13,3 +13,8 @@
 - [x] Reproduce and repair `basalt-dashboard` TypeScript validation and image-verification failures; push a validated fix.
 - [x] Investigate the `cyrisk-core` Dependabot automation failure without weakening source-quality or branch-protection controls; confirmed a GitHub-managed dynamic workflow with no repository-controlled repair or rerun path.
 - [x] Verify all repaired Basalt repositories report green current-main checks, then update the profile program status only from the resulting evidence; document the separate GitHub-managed Cyrisk Dependabot exception without masking it.
+- [x] Verify every public profile README and GitHub Pages route, JavaScript module, stylesheet, image asset, CTA target, and reduced-motion fallback returns the expected response.
+- [x] Recheck current-main checks, release tags, branch-protection visibility, and public README reachability for all forty Basalt, AgentProof, CCM, and Cyrisk repositories.
+- [x] Run focused tests, type checks, production build, and rendered visual verification for the Basalt Dashboard and portfolio pages; Dashboard desktop/mobile screenshots passed, while the public-portfolio browser extension’s visual capture timed out after its rendered semantic check succeeded.
+- [x] Repair any reproducible portfolio defect found during the verification pass; no new repository-controlled functional defect was reproduced. Preserve the documented GitHub-managed Cyrisk Dependabot exception and Basalt branch-protection visibility gap rather than masking either.
+- [x] Publish any justified profile status correction and deliver a limitations-aware verification report; no new correction was justified by this verification pass.
