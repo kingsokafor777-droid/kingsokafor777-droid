@@ -6,5 +6,5 @@
 - [x] Validate the static site locally, verify README link targets and accessibility, then commit and push the profile-repository update.
 - [x] Audit the public profile repository and deployed Pages source for occurrences of "Manus" and other attribution text; classify every match as accurate, irrelevant, or misleading.
 - [x] Recheck the Basalt, AgentProof, CCM, and Cyrisk featured programs against their public releases, protections, hosted checks, and stated README boundaries.
-- [ ] Correct only inaccurate or irrelevant public-profile wording, rerun static validation, and publish any justified profile-repository revision.
-- [ ] Document verified evidence, limitations, and remaining work without overstating repository maturity or hiding accurate authorship.
+- [x] Correct only inaccurate or irrelevant public-profile wording, rerun static validation, and publish any justified profile-repository revision.
+- [x] Document verified evidence, limitations, and remaining work without overstating repository maturity or hiding accurate authorship.
