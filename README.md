@@ -65,10 +65,10 @@ I currently work as a Product Lead Architect on an AI/ML energy platform with th
 ## Featured build programs
 
 <p align="center">
-  <a href="https://kingsokafor777-droid.github.io/"><img width="100%" src="https://raw.githubusercontent.com/kingsokafor777-droid/kingsokafor777-droid/main/docs/assets/thread-preview.svg" alt="Connected systems visual linking the portfolio programs. Open the interactive project index for the 3D thread experience." /></a>
+  <a href="https://kingsokafor777-droid.github.io/kingsokafor777-droid/"><img width="100%" src="https://raw.githubusercontent.com/kingsokafor777-droid/kingsokafor777-droid/main/docs/assets/thread-preview.svg" alt="Connected systems visual linking the portfolio programs. Open the interactive project index for the 3D thread experience." /></a>
 </p>
 
-> **[Open the interactive project index →](https://kingsokafor777-droid.github.io/)** The linked GitHub Pages site provides the interactive 3D thread treatment and the full repository tables. This profile README remains intentionally static and accessible because GitHub Markdown does not execute JavaScript.
+> **[Open the interactive project index →](https://kingsokafor777-droid.github.io/kingsokafor777-droid/)** The linked GitHub Pages site provides the interactive 3D thread treatment and the full repository tables. This profile README remains intentionally static and accessible because GitHub Markdown does not execute JavaScript.
 
 ### Basalt — cloud-security posture platform
 
@@ -76,7 +76,7 @@ I currently work as a Product Lead Architect on an AI/ML energy platform with th
 
 > **Current state:** 9 repositories are shipped; `basalt-platform` remains in deliberate production hardening behind an active zero-high/critical image gate.
 
-**[Explore Basalt — full repository architecture →](https://kingsokafor777-droid.github.io/projects/basalt.html)**
+**[Explore Basalt — full repository architecture →](https://kingsokafor777-droid.github.io/kingsokafor777-droid/projects/basalt.html)**
 
 ### AgentProof — workflow security regression testing for AI agents
 
@@ -84,7 +84,7 @@ I currently work as a Product Lead Architect on an AI/ML energy platform with th
 
 > **Current state:** 10 tagged v0.1.0 source releases with protected branches and hosted quality evidence. It is not represented as a hosted service or live destructive tool.
 
-**[Explore AgentProof — full repository architecture →](https://kingsokafor777-droid.github.io/projects/agentproof.html)**
+**[Explore AgentProof — full repository architecture →](https://kingsokafor777-droid.github.io/kingsokafor777-droid/projects/agentproof.html)**
 
 ### Continuous Control Monitoring — evidence engineering for cloud control posture
 
@@ -92,7 +92,7 @@ I currently work as a Product Lead Architect on an AI/ML energy platform with th
 
 > **Current state:** 10 verified source releases. Outputs are versioned technical-control assessments and evidence—not ISO certification, SOC 2 attestation, or a provisioned cloud environment.
 
-**[Explore CCM — full repository architecture →](https://kingsokafor777-droid.github.io/projects/ccm.html)**
+**[Explore CCM — full repository architecture →](https://kingsokafor777-droid.github.io/kingsokafor777-droid/projects/ccm.html)**
 
 ### Cyrisk — evidence-governed cyber-risk quantification
 
@@ -100,7 +100,7 @@ I currently work as a Product Lead Architect on an AI/ML energy platform with th
 
 > **Current state:** 10 v0.1.0 source releases with an independent program audit. Outputs are supplied-input analyses, not forecasts, real-loss predictions, authorization decisions, or compliance certification.
 
-**[Explore Cyrisk — full repository architecture →](https://kingsokafor777-droid.github.io/projects/cyrisk.html)**
+**[Explore Cyrisk — full repository architecture →](https://kingsokafor777-droid.github.io/kingsokafor777-droid/projects/cyrisk.html)**
 
 ### [Ontario Electricity Demand — Day-Ahead Forecasting](https://github.com/kingsokafor777-droid/ontario-demand-forecast)
 
