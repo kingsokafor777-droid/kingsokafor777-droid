@@ -64,141 +64,43 @@ I currently work as a Product Lead Architect on an AI/ML energy platform with th
 
 ## Featured build programs
 
+<p align="center">
+  <a href="https://kingsokafor777-droid.github.io/"><img width="100%" src="https://raw.githubusercontent.com/kingsokafor777-droid/kingsokafor777-droid/main/docs/assets/thread-preview.svg" alt="Connected systems visual linking the portfolio programs. Open the interactive project index for the 3D thread experience." /></a>
+</p>
+
+> **[Open the interactive project index →](https://kingsokafor777-droid.github.io/)** The linked GitHub Pages site provides the interactive 3D thread treatment and the full repository tables. This profile README remains intentionally static and accessible because GitHub Markdown does not execute JavaScript.
+
 ### Basalt — cloud-security posture platform
 
-**Basalt** is a ten-repository cloud-security platform. Its architecture joins multi-cloud, IaC, and Kubernetes posture evidence into a common finding contract; the Warehouse models drift; the Dashboard exposes tenant-scoped risk views; RAG supplies cited explanation; and an Agent proposes controlled remediation.
+**Basalt** joins multi-cloud, IaC, and Kubernetes posture evidence into a common finding contract, with drift-aware Warehouse models, tenant-scoped dashboard boundaries, cited explanation, and controlled remediation planning.
 
-| # | Repository | What it demonstrates | Track | Current status |
-|:--|:--|:--|:--|:--|
-| 01 | [`basalt-core`](https://github.com/kingsokafor777-droid/basalt-core) | Canonical findings, deterministic risk model, control catalogue, SARIF/OCSF, scanner interface. | Foundation | ✅ Shipped |
-| 02 | [`basalt-aws`](https://github.com/kingsokafor777-droid/basalt-aws) | Read-only AWS posture scanner for IAM, S3, MFA, CloudTrail, and KMS. | Cloud Security | ✅ Shipped |
-| 03 | [`basalt-azure`](https://github.com/kingsokafor777-droid/basalt-azure) | Azure scanner validating the multi-provider plugin contract. | Cloud Security | ✅ Shipped |
-| 04 | [`basalt-iac`](https://github.com/kingsokafor777-droid/basalt-iac) | Terraform static analysis and SARIF output. | Cloud Security | ✅ Shipped |
-| 05 | [`basalt-k8s`](https://github.com/kingsokafor777-droid/basalt-k8s) | Kubernetes RBAC, Pod Security Standards, and NetworkPolicy posture checks. | Cloud Security | ✅ Shipped |
-| 06 | [`basalt-warehouse`](https://github.com/kingsokafor777-droid/basalt-warehouse) | Finding ingestion, DuckDB/dbt modeling, and posture drift history. | Data Engineering | ✅ Shipped |
-| 07 | [`basalt-dashboard`](https://github.com/kingsokafor777-droid/basalt-dashboard) | Tenant-aware executive posture analytics and Warehouse read boundary. | Data / Frontend | ✅ Shipped |
-| 08 | [`basalt-rag`](https://github.com/kingsokafor777-droid/basalt-rag) | Retrieval over findings and controls with citations. | AI / RAG | ✅ Shipped |
-| 09 | [`basalt-agent`](https://github.com/kingsokafor777-droid/basalt-agent) | Guarded Terraform-remediation planning. | AI Agents | ✅ Shipped |
-| 10 | [`basalt-platform`](https://github.com/kingsokafor777-droid/basalt-platform) | Terraform, Helm, CI/CD, architecture decisions, and release documentation. | Platform Engineering | 🚧 Production hardening |
+> **Current state:** 9 repositories are shipped; `basalt-platform` remains in deliberate production hardening behind an active zero-high/critical image gate.
 
-<details>
-<summary><strong>System detail — contracts, evidence, and release discipline</strong></summary>
-<br />
-
-| Dimension | Basalt implementation |
-|---|---|
-| **Stack** | Python, TypeScript/React, DuckDB/dbt, Terraform, Helm, GitHub Actions, SARIF, OCSF. |
-| **Scale model** | Multi-scanner findings flow through one canonical contract and into time-aware Warehouse models. |
-| **Security** | Read-only scanner constraints, tenant-scoped Dashboard procedures, immutable CI pinning, SBOM/provenance paths, and protected production environments. |
-| **Impact** | Turns fragmented cloud-security outputs into normalized evidence, explainable risk, and controlled remediation paths. |
-| **Repository** | [Basalt Platform](https://github.com/kingsokafor777-droid/basalt-platform) is the architecture and deployment hub. |
-
-The current production release policy is deliberately strict: no container image is published and no dependent cloud provisioning runs until the zero-high/critical image gate passes. That is an active control, not an omitted capability.
-
-</details>
+**[Explore Basalt — full repository architecture →](https://kingsokafor777-droid.github.io/projects/basalt.html)**
 
 ### AgentProof — workflow security regression testing for AI agents
 
-**AgentProof** is a completed local-first, CI-native verification program for tool-using AI-agent workflows. Its public components establish versioned evidence contracts, replay recorded or synthetic traces, enforce deterministic workflow-level invariants, and report unsafe composed action paths—even where every individual action appears allowed.
+**AgentProof** is a completed local-first program for versioned agent traces, deterministic workflow invariants, stateful replay, adversarial fixtures, and CI-ready security evidence.
 
-> **Current state:** ✅ **Program complete.** [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core), [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel), [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp), [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy), [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay), [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus), [`agentproof-action`](https://github.com/kingsokafor777-droid/agentproof-action), [`agentproof-python`](https://github.com/kingsokafor777-droid/agentproof-python), [`agentproof-typescript`](https://github.com/kingsokafor777-droid/agentproof-typescript), and [`agentproof-platform`](https://github.com/kingsokafor777-droid/agentproof-platform) have annotated [`v0.1.0`](https://github.com/kingsokafor777-droid/agentproof-platform/releases/tag/v0.1.0) source releases, successful hosted CI and CodeQL evidence, protected `main` branches, reproducible contracts, offline validation, deterministic evidence, and immutable-pinned quality gates. These are source releases; no package-registry publication or hosted service is implied.
+> **Current state:** 10 tagged v0.1.0 source releases with protected branches and hosted quality evidence. It is not represented as a hosted service or live destructive tool.
 
-| # | Repository | What it owns | Track | Current status |
-|:--|:--|:--|:--|:--|
-| 01 | [`agentproof-core`](https://github.com/kingsokafor777-droid/agentproof-core) | Versioned trace and finding contracts, policy result model, evidence IDs, JSON Schema. | Foundation | ✅ Shipped |
-| 02 | [`agentproof-otel`](https://github.com/kingsokafor777-droid/agentproof-otel) | Offline OTLP ingestion, explicit tool-span selection, and deterministic AgentProof trace normalization. | Observability | ✅ Shipped |
-| 03 | [`agentproof-mcp`](https://github.com/kingsokafor777-droid/agentproof-mcp) | Offline MCP transcript parsing, hash-bound tool-definition provenance, and privacy-minimized capability inventory. | Agent Security | ✅ Shipped |
-| 04 | [`agentproof-policy`](https://github.com/kingsokafor777-droid/agentproof-policy) | Closed invariant DSL, deterministic Core evaluator, stable findings, and bounded Rego/Cedar review artifacts. | Policy Engineering | ✅ Shipped |
-| 05 | [`agentproof-replay`](https://github.com/kingsokafor777-droid/agentproof-replay) | Deterministic stateful replay, sequence graph, approval observations, and shortest policy-violation paths. | Security Engineering | ✅ Shipped |
-| 06 | [`agentproof-corpus`](https://github.com/kingsokafor777-droid/agentproof-corpus) | Versioned synthetic safe/adversarial fixtures, strict manifest integrity, and deterministic Core→Policy→Replay benchmarks. | Security Research | ✅ Shipped |
-| 07 | [`agentproof-action`](https://github.com/kingsokafor777-droid/agentproof-action) | Bundled Node Action with strict local evidence validation, deterministic SARIF/JUnit/JSON output, exact baseline comparison, and safe opt-in PR evidence. | DevSecOps | ✅ Shipped |
-| 08 | [`agentproof-python`](https://github.com/kingsokafor777-droid/agentproof-python) | Typed append-only Core trace capture, payload-blind lifecycle helpers, optional LangChain callback, and deterministic offline OTLP JSON handoff. | Developer Experience | ✅ Shipped |
-| 09 | [`agentproof-typescript`](https://github.com/kingsokafor777-droid/agentproof-typescript) | Typed append-only Core trace capture, bounded Node lifecycle helpers, deterministic fingerprints, local CLI, and Core-compatible OTLP JSON handoff. | Developer Experience | ✅ Shipped |
-| 10 | [`agentproof-platform`](https://github.com/kingsokafor777-droid/agentproof-platform) | Program architecture, accepted ADRs, security and release policy, CI and Helm-decision references, roadmap, and incident/operator runbooks. | Platform Engineering | ✅ Shipped |
+**[Explore AgentProof — full repository architecture →](https://kingsokafor777-droid.github.io/projects/agentproof.html)**
 
-<details>
-<summary><strong>System detail — what makes AgentProof different</strong></summary>
-<br />
+### Continuous Control Monitoring — evidence engineering for cloud control posture
 
-| Dimension | AgentProof design target |
-|---|---|
-| **Stack** | Python and TypeScript SDKs, JSON Schema, OpenTelemetry-compatible traces, closed policy assertions, and SARIF/JUnit/JSON evidence. |
-| **Scale model** | Framework-neutral core with adapter repositories; local-first and CI-native before any hosted control plane. |
-| **Security** | Deterministic workflow policies over sequences, authorization state, data labels, approvals, retries, and modeled side effects. |
-| **Impact** | Makes unsafe agent workflows reproducible in pull requests rather than discoverable only after production incidents. |
-| **Repository** | All ten AgentProof repositories have protected-branch, tagged `v0.1.0` source releases. [`agentproof-platform`](https://github.com/kingsokafor777-droid/agentproof-platform) is the architecture, security, release, deployment-reference, and operator handoff for the nine component repositories. |
+**Continuous Control Monitoring** is a completed evidence-first program for AWS/Azure technical-control posture, tamper-evident evidence, supplied-observation assessment, local casework, and audit preparation.
 
-The first milestone is intentionally narrow: prove a privilege-escalation or data-exfiltration sequence from a sealed fixture; return a stable finding ID, violated invariant, shortest path, and SARIF result. No hosted SaaS, live destructive tool call, or non-deterministic test dependency belongs in version 1.
+> **Current state:** 10 verified source releases. Outputs are versioned technical-control assessments and evidence—not ISO certification, SOC 2 attestation, or a provisioned cloud environment.
 
-</details>
+**[Explore CCM — full repository architecture →](https://kingsokafor777-droid.github.io/projects/ccm.html)**
 
-### Continuous Control Monitoring & Evidence Engineering — cloud evidence automation
+### Cyrisk — evidence-governed cyber-risk quantification
 
-**Continuous Control Monitoring & Evidence Engineering** is a completed ten-repository, deterministic, evidence-first platform program for assessing AWS and Azure technical control posture, retaining tamper-evident evidence, and producing review-ready risk, exception, remediation, and audit-package views. It reports **versioned technical-control assessments and supporting evidence**, not ISO certification, SOC 2 attestation, or framework conformance from an automated check.
+**Cyrisk** is a completed ten-component source-release program for deterministic scenario analysis, provenance-aware assumptions, non-causal control comparisons, review signals, and reproducible audit material. It is FAIR-inspired only—not a FAIR implementation or certification claim.[1] [2]
 
-> **Current state:** ✅ **Program complete.** [`ccm-core`](https://github.com/kingsokafor777-droid/ccm-core) v0.1.0, [`ccm-controls`](https://github.com/kingsokafor777-droid/ccm-controls) v0.1.1, [`ccm-aws`](https://github.com/kingsokafor777-droid/ccm-aws) v0.1.1, [`ccm-azure`](https://github.com/kingsokafor777-droid/ccm-azure) v0.1.0, [`ccm-ledger`](https://github.com/kingsokafor777-droid/ccm-ledger) v0.1.1, [`ccm-assessor`](https://github.com/kingsokafor777-droid/ccm-assessor) v0.1.0, [`ccm-casework`](https://github.com/kingsokafor777-droid/ccm-casework) v0.1.0, [`ccm-audit-export`](https://github.com/kingsokafor777-droid/ccm-audit-export) v0.1.0, [`ccm-console`](https://github.com/kingsokafor777-droid/ccm-console) v0.1.2, and [`ccm-platform`](https://github.com/kingsokafor777-droid/ccm-platform) v0.1.0 are verified source releases with deterministic validation, successful hosted CI and CodeQL workflows, and protected `main` branches. Together they provide contracts/integrity, control definition/evaluation, AWS/Azure normalization, evidence ledger, supplied-observation assessment, local casework, payload-blind audit preparation, a secure console API/workbench boundary, and platform deployment/operations references. These are source releases; no provisioned cloud environment, deployed database or telemetry backend, published container image, or certification is implied.
+> **Current state:** 10 v0.1.0 source releases with an independent program audit. Outputs are supplied-input analyses, not forecasts, real-loss predictions, authorization decisions, or compliance certification.
 
-| # | Repository | What it owns | Track | Current status |
-|:--|:--|:--|:--|:--|
-| 01 | [`ccm-core`](https://github.com/kingsokafor777-droid/ccm-core) | Versioned evidence, control, assessment, exception, remediation, and audit-package contracts; JSON Schema, canonical hashing, and append-only journal verification. | Foundation | ✅ Shipped |
-| 02 | [`ccm-controls`](https://github.com/kingsokafor777-droid/ccm-controls) | Declarative technical-control DSL, versioned control packs, mapping provenance, deterministic evaluation, severity, and SLA policy. | Control Engineering | ✅ Shipped |
-| 03 | [`ccm-aws`](https://github.com/kingsokafor777-droid/ccm-aws) | Read-only AWS source snapshots, completeness visibility, and deterministic normalization for identity, storage, CloudTrail, Config, KMS, network, encryption, and logging posture. | Cloud Security | ✅ Shipped |
-| 04 | [`ccm-azure`](https://github.com/kingsokafor777-droid/ccm-azure) | Read-only Azure source snapshots, completeness visibility, and deterministic normalization for Resource Graph, storage, network, Monitor/Activity Log, diagnostic settings, Key Vault, and encryption posture. | Cloud Security | ✅ Shipped |
-| 05 | [`ccm-ledger`](https://github.com/kingsokafor777-droid/ccm-ledger) | PostgreSQL migration assets, content-addressed evidence references, immutable audit journal, retention/expiry lifecycle, and deterministic integrity verification. | Data / Evidence Engineering | ✅ Shipped |
-| 06 | [`ccm-assessor`](https://github.com/kingsokafor777-droid/ccm-assessor) | Deterministic supplied-observation assessment orchestration, evidence coverage, drift comparison, transparent risk rollups, and sealed assessment manifests. | Risk Engineering | ✅ Shipped · v0.1.0 |
-| 07 | [`ccm-casework`](https://github.com/kingsokafor777-droid/ccm-casework) | Deterministic control-exception references, compensating-control evidence, remediation ownership/state, supplied-time SLA evaluation, approval evidence, and closure verification. | GRC Engineering | ✅ Shipped · v0.1.0 |
-| 08 | [`ccm-audit-export`](https://github.com/kingsokafor777-droid/ccm-audit-export) | Deterministic payload-blind evidence packages, declared redaction policy, integrity manifests, and offline verification CLI for audit preparation. | Audit Engineering | ✅ Shipped · v0.1.0 |
-| 09 | [`ccm-console`](https://github.com/kingsokafor777-droid/ccm-console) | Tenant-scoped FastAPI/PostgreSQL API boundary, RBAC, payload-blind evidence explorer, and Next.js/React executive coordination workbench. | Product / Frontend | ✅ Shipped · v0.1.2 |
-| 10 | [`ccm-platform`](https://github.com/kingsokafor777-droid/ccm-platform) | Docker/Compose references, provider-free Terraform test environment, OpenTelemetry data-minimization policy, CI/CD controls, deployment references, threat model, ADRs, and operator runbooks. | Platform Engineering | ✅ Shipped · v0.1.0 |
-
-<details>
-<summary><strong>System detail — evidence before dashboard</strong></summary>
-<br />
-
-| Dimension | Continuous Control Monitoring design target |
-|---|---|
-| **Determinism** | No AI is required for collection, evaluation, scoring, exceptions, export, or tests. The same rule and evidence version must produce the same result. |
-| **Evidence** | Every result links to collector provenance, cloud scope, asset identity, source timestamp, canonical hash, expiry state, rule version, and control mapping. |
-| **Framework boundary** | NIST mapping data will be versioned; ISO, CIS, and SOC 2 mappings will use identifiers, source provenance, and customer-licensed packs rather than copied proprietary control text. |
-| **Security** | No cloud credentials or live provider calls in tests; real collection is opt-in, read-only, least-privilege, and tenant-scoped. |
-| **Impact** | Replaces screenshot-driven compliance preparation with reproducible technical evidence, explicit coverage gaps, and accountable remediation workflow. |
-
-The completed program deliberately remains bounded: `ccm-platform` supplies deployment references and operator handoff, not a provisioned cloud account, live OpenTelemetry backend, published container image, or deployed database. Missing scope, expired evidence, collection failure, or unavailable source must surface as an explicit coverage gap—not a pass.
-
-</details>
-
-### Cyrisk — evidence-governed cyber risk quantification
-
-**Cyrisk** is a completed ten-component source-release program: a deterministic, scenario-based system that translates supplied technical evidence and explicit assumptions into reproducible cyber-risk exposure ranges, control-comparison artifacts, risk-register records, and review-ready executive material. It is **FAIR-inspired, not a FAIR implementation or certification claim**. Its outputs are versioned analyses of supplied inputs—not forecasts, insurance estimates, real loss predictions, spend recommendations, or automated risk-acceptance decisions. NIST positions cybersecurity risk information and risk registers as inputs to enterprise risk-management processes, not substitutes for leadership decisions. [1] [2]
-
-> **Current state:** ✅ **All ten Cyrisk source releases are shipped and the independent program audit is complete.** [`cyrisk-core`](https://github.com/kingsokafor777-droid/cyrisk-core) v0.1.0, [`cyrisk-model`](https://github.com/kingsokafor777-droid/cyrisk-model) v0.1.0, [`cyrisk-evidence`](https://github.com/kingsokafor777-droid/cyrisk-evidence) v0.1.0, [`cyrisk-controls`](https://github.com/kingsokafor777-droid/cyrisk-controls) v0.1.0, [`cyrisk-register`](https://github.com/kingsokafor777-droid/cyrisk-register) v0.1.0, [`cyrisk-ccm`](https://github.com/kingsokafor777-droid/cyrisk-ccm) v0.1.0, [`cyrisk-scenarios`](https://github.com/kingsokafor777-droid/cyrisk-scenarios) v0.1.0, [`cyrisk-audit-export`](https://github.com/kingsokafor777-droid/cyrisk-audit-export) v0.1.0, [`cyrisk-console`](https://github.com/kingsokafor777-droid/cyrisk-console) v0.1.0, and [`cyrisk-platform`](https://github.com/kingsokafor777-droid/cyrisk-platform) v0.1.0 are verified source releases with deterministic validation, successful hosted CI and CodeQL workflows, and protected `main` branches. The audit verified release/tag/asset governance, six required checks, protection invariants, and fresh local quality gates; it did not make a code-scanning-alert-count, live-deployment, authorization, financial, or certification claim. Cyrisk is a portfolio of validated source releases and references—not a live operating SaaS or compliance certification.
-
-| # | Repository | What it owns | Track | Current status |
-|:--|:--|:--|:--|:--|
-| 01 | [`cyrisk-core`](https://github.com/kingsokafor777-droid/cyrisk-core) | Versioned scenario, factor-range/distribution, loss-component, calculation-manifest, comparison, risk-register, and review-decision contracts; JSON Schema and canonical hashing. | Foundation | ✅ Shipped · v0.1.0 |
-| 02 | [`cyrisk-model`](https://github.com/kingsokafor777-droid/cyrisk-model) | Seed-controlled exposure-range simulation, percentile summaries, sensitivity analysis, and stable calculation traces. | Quantitative Risk Engineering | ✅ Shipped · v0.1.0 |
-| 03 | [`cyrisk-evidence`](https://github.com/kingsokafor777-droid/cyrisk-evidence) | Input provenance, estimate/assumption registry, confidence/completeness rules, calibration-review records, integrity, and expiry. | Evidence Engineering | ✅ Shipped · v0.1.0 |
-| 04 | [`cyrisk-controls`](https://github.com/kingsokafor777-droid/cyrisk-controls) | Versioned control-effect and cost assumptions plus explicit non-causal before/after comparison artifacts. | Control Economics | ✅ Shipped · v0.1.0 |
-| 05 | [`cyrisk-register`](https://github.com/kingsokafor777-droid/cyrisk-register) | Cybersecurity risk-register lifecycle, appetite/tolerance context, rollup, review evidence, escalation, and decision boundaries. | GRC / ERM Engineering | ✅ Shipped · v0.1.0 |
-| 06 | [`cyrisk-ccm`](https://github.com/kingsokafor777-droid/cyrisk-ccm) | Offline adapter from versioned CCM evidence/assessment references to scenario-input candidates and coverage gaps. | Integration Engineering | ✅ Shipped · v0.1.0 |
-| 07 | [`cyrisk-scenarios`](https://github.com/kingsokafor777-droid/cyrisk-scenarios) | Sealed synthetic scenario corpus, benchmark harness, regression fixtures, and adversarial assumption-quality cases. | Risk Research | ✅ Shipped · v0.1.0 |
-| 08 | [`cyrisk-audit-export`](https://github.com/kingsokafor777-droid/cyrisk-audit-export) | Reproducible payload-blind review packages, declared redaction policy, manifests, and offline verification CLI. | Audit Engineering | ✅ Shipped · v0.1.0 |
-| 09 | [`cyrisk-console`](https://github.com/kingsokafor777-droid/cyrisk-console) | FastAPI/static-workbench source reference, synthetic tenant scope, demonstrative caller-context role checks, and a PostgreSQL schema reference. | Product / Frontend | ✅ Shipped · v0.1.0 |
-| 10 | [`cyrisk-platform`](https://github.com/kingsokafor777-droid/cyrisk-platform) | Deterministic handoff validator; disabled Compose reference, provider-free Terraform guard, telemetry-minimization policy, CI/release controls, threat model, ADRs, and runbooks. | Platform Engineering | ✅ Shipped · v0.1.0 |
-
-<details>
-<summary><strong>System detail — evidence before exposure</strong></summary>
-<br />
-
-| Dimension | Cyrisk design target |
-|---|---|
-| **Input discipline** | Every estimate has a unit, range/distribution, rationale, source class, confidence, review state, expiry, and canonical hash. Unknowns remain explicit. |
-| **Determinism** | Same sealed scenario, assumptions, model version, and seed produce stable output. No live market data, LLM, customer evidence, or external calculation service belongs in default tests. |
-| **Output discipline** | Report percentile bands, sensitivity drivers, completeness, and assumptions—not a single authoritative financial number. |
-| **Decision boundary** | The system can record supplied tolerance or approval evidence; it cannot accept risk, authorize spend, execute remediation, or claim that a control causes real-world savings. |
-| **CCM relationship** | CCM contributes versioned technical-evidence references through an offline adapter; Cyrisk never reads a live CCM database or silently treats a finding as a loss event. |
-
-</details>
+**[Explore Cyrisk — full repository architecture →](https://kingsokafor777-droid.github.io/projects/cyrisk.html)**
 
 ### [Ontario Electricity Demand — Day-Ahead Forecasting](https://github.com/kingsokafor777-droid/ontario-demand-forecast)
 
@@ -251,9 +153,9 @@ An end-to-end forecasting system based on public IESO demand and Open-Meteo weat
 ```yaml
 building:
   - Basalt: production-grade release controls for a cloud-security posture platform
-  - AgentProof: complete ten-repository, local-first security-regression toolkit with protected-branch and tagged v0.1.0 source releases for contracts, intake, deterministic policy/replay, corpus, CI evidence, typed SDKs, and platform operations
-  - Continuous Control Monitoring: complete ten-repository AWS/Azure evidence-engineering program; ccm-core v0.1.0, ccm-controls v0.1.1, ccm-aws v0.1.1, ccm-azure v0.1.0, ccm-ledger v0.1.1, ccm-assessor v0.1.0, ccm-casework v0.1.0, ccm-audit-export v0.1.0, ccm-console v0.1.2, and ccm-platform v0.1.0 are shipped source releases
-  - Cyrisk: architecture-stage evidence-governed cyber-risk quantification program; deterministic scenario/range analysis, uncertainty/provenance, control-comparison artifacts, reviewed risk-register records, and CCM integration boundaries—no repositories public yet
+  - AgentProof: complete ten-repository, local-first security-regression toolkit with protected branches and tagged v0.1.0 source releases
+  - Continuous Control Monitoring: complete ten-repository AWS/Azure evidence-engineering program with verified source releases
+  - Cyrisk: complete ten-repository evidence-governed cyber-risk quantification program with audited v0.1.0 source releases
 learning:
   - OpenTelemetry agent trace conventions
   - deterministic policy evaluation for tool-using agents
@@ -268,19 +170,3 @@ open_to:
 
 [1]: https://csrc.nist.gov/pubs/ir/8286/r1/final "NISTIR 8286 Rev. 1 — Integrating Cybersecurity and Enterprise Risk Management"
 [2]: https://csrc.nist.gov/pubs/ir/8286/a/r1/final "NISTIR 8286A Rev. 1 — Identifying and Estimating Cybersecurity Risk for Enterprise Risk Management"
-
----
-
-## Connect
-
-<p align="center">
-  <a href="mailto:okaforkingsley777@gmail.com"><img src="https://img.shields.io/badge/Gmail-okaforkingsley777%40gmail.com-312E81?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/kingsokafor777-droid"><img src="https://img.shields.io/badge/GitHub-kingsokafor777--droid-4C1D95?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://kingsleyokafor.dev"><img src="https://img.shields.io/badge/Portfolio-kingsleyokafor.dev-6D28D9?style=for-the-badge&logo=firefox-browser&logoColor=white" alt="Portfolio" /></a>
-</p>
-
-<p align="center"><sub>Build systems that make good engineering decisions easier—and unsafe ones visible before they ship.</sub></p>
-
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,45:312E81,100:7C3AED&height=120&section=footer" alt="Profile footer" />
-</p>
