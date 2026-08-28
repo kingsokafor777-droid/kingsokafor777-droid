@@ -7,13 +7,6 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/M.Eng.-Engineering%20Design%20%26%20Innovation-312E81?style=flat-square&logo=bookstack&logoColor=white" alt="MEng Engineering Design and Innovation" />
-  <img src="https://img.shields.io/badge/MBA-Finance-4C1D95?style=flat-square&logo=bookstack&logoColor=white" alt="MBA Finance" />
-  <img src="https://img.shields.io/badge/PMP%C2%AE-Project%20Management-6D28D9?style=flat-square&logo=target&logoColor=white" alt="PMP" />
-  <img src="https://img.shields.io/badge/Ottawa-Canada-1E3A8A?style=flat-square&logo=googlemaps&logoColor=white" alt="Ottawa, Canada" />
-</p>
-
-<p align="center">
   <a href="https://kingsleyokafor.dev"><img src="https://img.shields.io/badge/Portfolio-kingsleyokafor.dev-312E81?style=for-the-badge&logo=firefox-browser&logoColor=white" alt="Portfolio" /></a>
   <a href="mailto:okaforkingsley777@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-4C1D95?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://github.com/kingsokafor777-droid"><img src="https://img.shields.io/badge/GitHub-kingsokafor777--droid-0F172A?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
@@ -116,16 +109,6 @@ An end-to-end forecasting system based on public IESO demand and Open-Meteo weat
 | **Cloud & Endpoint Security** | Microsoft | Defender XDR and Azure security-oriented work across detection, security operations, and cloud posture. |
 | **Operations Analytics** | Amazon | Data-driven operational analysis and decision support. |
 | **Structural Engineering** | Built-environment delivery | Four years of engineering delivery before transitioning into software, data, and AI systems. |
-
----
-
-## Academic and professional credentials
-
-<p align="center">
-  <img src="https://img.shields.io/badge/University%20of%20Ottawa-M.Eng.%20Engineering%20Design%20%26%20Innovation-312E81?style=for-the-badge&logo=academia&logoColor=white" alt="University of Ottawa MEng" />
-  <img src="https://img.shields.io/badge/London%20Business%20School-MBA%20Finance-4C1D95?style=for-the-badge&logo=academia&logoColor=white" alt="London Business School MBA" />
-  <img src="https://img.shields.io/badge/PMI-PMP%C2%AE-6D28D9?style=for-the-badge&logo=target&logoColor=white" alt="PMP credential" />
-</p>
 
 ---
 
